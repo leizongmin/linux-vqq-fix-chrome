@@ -2,18 +2,6 @@
   "name": "linux-vqq-fix",
   "description": "修复Linux下Chrome浏览器无法播放腾讯视频",
   "version": "0.0.0.1",
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "*://v.qq.com/*",
-    "ws://v.qq.com/*",
-    "wss://v.qq.com/*"
-  ],
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
   "content_scripts": [
     {
       "run_at": "document_start",
