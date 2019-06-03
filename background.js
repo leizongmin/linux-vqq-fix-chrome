@@ -29,8 +29,9 @@
         for (let i = 0; i < headersLength; i++) {
           if (headers[i].name === 'User-Agent') {
             const value = headers[i].value;
-            if (!value.includes('; Fedora;'))
-              headers[i].value = value.replace('; Linux', '; Fedora; Linux');
+            if (/\(.*Linux.*\)/.test(value)) {
+              headers[i].value = value.replace(/(\(.*Linux.*\))/, '(Macintosh; Intel Mac OS X 10_14_1)');
+            }
             break;
           }
         }
