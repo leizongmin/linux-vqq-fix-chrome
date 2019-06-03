@@ -1,25 +1,7 @@
-# <img src="fedora_128.png" width="45" align="left"> Fedora User Agent
+# 修复Linux下Chrome浏览器无法播放腾讯视频
 
-Google Chrome Extension that modifies User-Agent string in outgoing requests to contain the name of Linux based distribution Fedora.
+在 Fedora 系统下使用 Chrome，需要先安装视频解码器：
 
-You can get if from [Google Chrome Store](https://chrome.google.com/webstore/detail/fedora-user-agent/hojggiaghnldpcknpbciehjcaoafceil).
-
-## Testing
-
-###### Chrome
-
-1. Clone or [download](https://github.com/brenopolanski/fedora-user-agent-chrome/archive/master.zip) project;
-
-2. Navigate to `chrome://extensions`
-
-3. Click on `Load unpacked extension...`
-
-4. Select the `fedora-user-agent-chrome` folder
-
-## Contributing
-
-If you want to help, please read the [Contributing](https://github.com/tpopela/fedora-user-agent-chrome/blob/master/CONTRIBUTING.md) guide.
-
-## History
-
-For detailed changelog, see [Releases](https://github.com/tpopela/fedora-user-agent-chrome/releases).
+```bash
+sudo dnf install chromium-libs-media-freeworld
+```
