@@ -5,13 +5,26 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://*/*",
-    "ws://*/*",
-    "wss://*/*"
+    "*://v.qq.com/*",
+    "ws://v.qq.com/*",
+    "wss://v.qq.com/*"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "js": [
+        "contentscript.js"
+      ],
+      "matches": [
+        "*://v.qq.com/*"
+      ]
+    }
+  ],
   "icons": {
     "48": "fedora_48.png",
     "128": "fedora_128.png"
